@@ -27,6 +27,12 @@ li {
 /* サイドメニューの横幅分だけ左にmarginをとる */
 .container {
     margin-left: 250px;
+    /* padding-top: 100vh; */
+    /* position: relative; */
+}
+
+section {
+    background: rgba(220, 221, 221, 0.8);
 }
 
 /* コンテンツ幅を設定するための共通クラス */
@@ -34,6 +40,8 @@ li {
     max-width: 900px;
     padding: 80px 20px;
     margin: 0 auto;
+    /* margin-bottom: 0; */
+    /* background: rgba(220, 221, 221, 0.8); */
 }
 
 .site-title {
@@ -79,11 +87,8 @@ asideタグは、メインコンテンツとは直接関係ない補足的な情
 #header {
     width: 250px;
     height: 100%;
-    /* background-color: #d9e70f; */
-    background-color: #1E0000;
-    /* background: repeating-linear-gradient(circle at -1000% 0%, rgba(116, 77, 48, 0.7), #573216, rgba(116, 77, 48, 0.9) 10%), repeating-radial-gradient(circle at -1000% 0%, #573216, #573216 0.1%, #744d30 0.4%, #744d30 0.5%); */
-    /* background-image: url(/Users/shibadazo/portfolio-shibadazo/image/img/wood1.jpg); */
-    /* padding: 30px 50px 30px 30px; */
+    /* background-color: #1E0000; */
+    background-color: rgb(141, 111, 47);
     position: fixed;
     top: 0;
     /* 画面の高さが低くてメニューが隠れてしまった場合に縦スクロールが出るよう設定 */
@@ -118,11 +123,15 @@ asideタグは、メインコンテンツとは直接関係ない補足的な情
     /* text-align: center; */
 }
 
-/* 動画を全画面に表示 */
-
+/* 背景画像 */
 #video {
     width: 100%;
     height: 100vh;
+    background: url('/Users/shibadazo/practice/practice/image/img5.JPG') top center;
+    /* background: url('/Users/shibadazo/practice/practice/image/own2.jpg') top center; */
+    background-size: cover;
+    z-index: -10;
+    position: fixed;
 }
 
 /* 
@@ -131,19 +140,21 @@ top: -220px;　で表示位置を調整
 z-index　でマイナスを設定して、他のコンテンツの下に隠れるようにする
 */
 
-#video .bg-video {
-    position: fixed;
-    /* top: -220px; */
-    z-index: -10;
-    width: 100%;
-}
+/* #video .bg-video { */
+    /* position: fixed; */
+        /* top: -220px; */
+    /* z-index: -10; */
+    /* width: 100%; */
+/* } */
 
 /* Project */
 /* 背景に黒の透過グラデーションを設定 */
 #project {
-    background: linear-gradient(rgba(220, 221, 221, 0), rgba(220, 221, 221, 0.8));
+    /* background: linear-gradient(rgba(220, 221, 221, 0), rgba(220, 221, 221, 0.8)); */
+    background: linear-gradient(to bottom, rgba(225, 225, 225, 0), rgba(220, 221, 221, 0.8));
     /* background: rgba(0, 0, 0, 0.8); */
     color: #fff;
+    padding-top: 100vh;
 }
 
 #project .list {
@@ -166,6 +177,7 @@ z-index　でマイナスを設定して、他のコンテンツの下に隠れ�
 
 #project .list li a {
     display: block;
+    height: 100%;
 }
 
 /* 類似要素を使用して、テキストの下に box-shadow で影をつける */
@@ -179,7 +191,7 @@ z-index　でマイナスを設定して、他のコンテンツの下に隠れ�
     bottom: 0;
 }
 
-#project .list .name {
+#project .list .sub_head {
     color: #fff;
     font-size: 0.75rem;
     position: absolute;
@@ -197,13 +209,18 @@ z-index　でマイナスを設定して、他のコンテンツの下に隠れ�
 }
 
 #project .hidden .caption {
+    height: 100%;
     font-size: 100%;
     color: #fff;
-    padding-top: 20%;
-    /* padding-left: 20px; */
-    /* padding-top: auto;
-    padding-bottom: auto; */
     padding-left: 10%;
+    position: relative;
+}
+
+#project .hidden .caption .caption_inner {
+    padding-left: 6%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #project .hidden .hidden-text {
@@ -213,7 +230,8 @@ z-index　でマイナスを設定して、他のコンテンツの下に隠れ�
     top: 0;
     left: 0;
     margin-left: -100%;
-    background-color: rgba(0, 0, 0, 4);
+    /* background-color: rgba(0, 0, 0, 4); */
+    background-color: rgb(141, 111, 47);
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
 }
@@ -223,19 +241,27 @@ z-index　でマイナスを設定して、他のコンテンツの下に隠れ�
 }
 
 #project .hidden img {
+    height: 100%;
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
 }
+/* 
+#project .hidden img:nth-child(2) {
+    position: absolute;
+    transform: translate(-50%, -50%);
+} */
 
 #project .hidden:hover img {
     margin-left: 100%;
 }
 
-#project .hidden .hidden-text .caption ul {
-    height: 100%;
-    /* padding-top: 5%; */
-    padding-left: 6%;
-}
+/* #project .hidden .hidden-text .caption ul { */
+        /* padding-top: 5%; */
+    /* padding-left: 6%; */
+    /* position: absolute; */
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+/* } */
 
 #project .hidden .hidden-text .caption ul li {
     width: 100%;
@@ -251,7 +277,7 @@ z-index　でマイナスを設定して、他のコンテンツの下に隠れ�
 /* 背景に黒の透過を設定 */
 #feature {
     /* background: rgba(0, 0, 0, 0.8); */
-    background: rgba(220, 221, 221, 0.8);
+    /* background: rgba(220, 221, 221, 0.8); */
     color: #fff;
     padding-bottom: 80px;
 }
@@ -326,7 +352,7 @@ widthに100%を設定して、padding で上下を50%に設定
 
 /* flow */
 #flow {
-    background: rgba(220, 221, 221, 0.8);
+    /* background: rgba(220, 221, 221, 0.8); */
     color: rgb(0, 0, 0);
     /* background-color: #fff; */
     padding-top: 40px;
@@ -344,12 +370,14 @@ widthに100%を設定して、padding で上下を50%に設定
 /* 図形下の黄色い棒線を作成 */
 #flow .figure::before {
     content: "";
-    width: 50px;
+    width: 30px;
+    /* width: 50px; */
     height: 600px;
-    background-color: #444444;
+    background-color: #1E0000;
     position: absolute;
     top: 0;
-    left: 75px;
+    left: 85px;
+    /* left: 75px; */
 }
 
 /* 図形の四角い部分を作成 */
@@ -357,7 +385,8 @@ widthに100%を設定して、padding で上下を50%に設定
     width: 200px;
     height: 80px;
     line-height: 80px;
-    background-color: #1E0000;
+    /* background-color: #1E0000; */
+    background-color: rgb(141, 111, 47);
     color: rgb(255, 255, 255);
     /* border-right: solid 2px #fff;
     border-top: solid 1px #fff;
@@ -375,7 +404,8 @@ widthに100%を設定して、padding で上下を50%に設定
 */
 #flow .figure li::before {
     content: "";
-    border-top: 30px solid #1E0000;
+    /* border-top: 30px solid #1E0000; */
+    border-top: 30px solid rgb(141, 111, 47);
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
     /* border-top: solid 3px #fff;
@@ -412,7 +442,8 @@ widthに100%を設定して、padding で上下を50%に設定
     width: 35px;
     height: 35px;
     line-height: 35px;
-    background-color: #1E0000;
+    /* background-color: #1E0000; */
+    background-color: rgb(141, 111, 47);
     border-radius: 50%;
     color: #fff;
     display: block;
@@ -437,7 +468,7 @@ widthに100%を設定して、padding で上下を50%に設定
 
 /* contact */
 #contact {
-    background: rgba(220, 221, 221, 0.8);
+    /* background: rgba(220, 221, 221, 0.8); */
     color: rgb(0, 0, 0);
     /* background-color: #fff; */
     padding-bottom: 80px;
@@ -581,7 +612,8 @@ widthに100%を設定して、padding で上下を50%に設定
     /* ハンバーガーメニュー */
     #navi {
         width: 300px;
-        background: #fff;
+        /* background: #fff; */
+        background-color: #1E0000;
         padding: 25px;
         position: fixed;
         top: 0;
@@ -666,20 +698,23 @@ widthに100%を設定して、padding で上下を50%に設定
     
     /* video */
     #video {
-        height: 80vh;
-    }
-    #video .bg-video {
-        height: 520px;
         top: 72px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
     }
+    /* #video .bg-video { */
+            /* height: 520px; */
+        /* height: 100vh; */
+        /* width: 100%; */
+        /* top: 72px; */
+        /* left: 0; */
+        /* right: 0; */
+        /* bottom: 0; */
+            /* margin: 0 auto; */
+    /* } */
 
     /* project */
-    #project {
-        background: rgba(0, 0, 0, 0.8);
-    }
+    /* #project { */
+        /* background: rgba(255, 255, 255, 0.8); */
+    /* } */
     #project .list {
         flex-direction: column;
     }
@@ -687,6 +722,12 @@ widthに100%を設定して、padding で上下を50%に設定
         width: 100%;
         margin-bottom: 30px;
     }
+
+    #project .hidden img {
+        width: 100%;
+        height: 100%;
+    }
+    
     #project .list li:nth-last-child(2) {
         margin-bottom: 30px;
     }
