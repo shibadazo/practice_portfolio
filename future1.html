@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Portfolio About Shibahara</title>
+        <meta name="description" content="自己紹介ページです！お気軽に閲覧ください〜！">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="side_bar.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="side_bar.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+        </style>
+    </head>
+
+    <body>
+        <header id="header">
+            <nav id="navi">
+                <a href="/Users/shibadazo/practice/practice/side_bar.html"><p class="name">SHIBAHARA<br><br>SHOGO</p></a>
+                <ul class="nav-menu">
+                    <li>
+                        <a href="#project">
+                            <img src="/Users/shibadazo/practice/practice/image/svg/profile.svg">
+                            <p class="profile">About Me</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#background">
+                            <img src="/Users/shibadazo/practice/practice/image/svg/diary.svg">
+                            <p class="diary">Background</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#achievement">
+                            <img src="/Users/shibadazo/practice/practice/image/svg/program.svg">
+                            <p class="program">Achievement</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <img src="/Users/shibadazo/practice/practice/image/svg/contact.svg">
+                            <p class="contact">Contact</p>
+                        </a>
+                    </li>
+                </ul>
+                <!-- <a href="side_bar.html"><img class="logo" src="/Users/shibadazo/practice/practice/image/img/soccer.svg"></a> -->
+            </nav>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div id="mask"></div>
+        </header>
+
+        <div class="container">
+            <main>
+                <div id="video"></div>
+                <section id="future1">
+                    <div class="wrapper">
+                        <h1 class="sec-title">1年：5D World Map Systemを用いた絶滅種・絶滅危惧種の原因・結果の時空間的・多元的要素分析の実現</h1>
+                        <div class="explain-text">
+                            この研究は、大学一年の「未来想像PJ」というゼミ形式の講義で作成したものである。 5D World Map Systemというサービスを用いて、絶滅種・絶滅危惧種の分布や情報を地理的、時系列的視点で可視化を行った。 また、このサービスに入力したデータ（種名、絶滅した年、主な分布座標など）をcsvファイルで出力し、様々な数値をグラフにすることで絶滅や数の減少の原因の追求に取り組んだ。
+                            この研究は、IESという国際会議に投稿・発表をさせていただいた。そこで、Best Paper Awardという賞をいただくことができた。 今後もこのような場に投稿・発表できるように励んでいきたいと思う。
+                        </div>
+                        <!-- <ul>
+                            <li><img src="/Users/shibadazo/practice/practice/image/miraisouzou1.png"></li>
+                            <li>
+                                <img src="/Users/shibadazo/practice/practice/image/5dwms.png">
+                                <img src="/Users/shibadazo/practice/practice/image/rbttotatnot5sc.png">
+                            </li>
+                        </ul> -->
+                        <div class="future-box">
+                            <div class="future-card-1">
+                                <img src="/Users/shibadazo/practice/practice/image/miraisouzou1.png">
+                            </div>
+                            <div class="future-card-2">
+                                <h1>5D WORLD MAP</h1>
+                                <img src="/Users/shibadazo/practice/practice/image/5dwms.png">
+                                <h1>OUTPUT</h1>
+                                <img src="/Users/shibadazo/practice/practice/image/rbttotatnot5sc.png">
+                            </div>
+                        </div>
+                        <!-- <h4 class="home-button"><a href="/Users/shibadazo/practice/practice/side_bar.html"></a>home</h4> -->
+                        <button class="home-button" onclick="location.href='/Users/shibadazo/practice/practice/side_bar.html'">home</button>
+                    </div>
+                </section>
+            </main>
+
+            <footer id="footer">
+                <a id="to-top" href="#"></a>
+
+                <ul class="menu">
+                    <li><a href="/Users/shibadazo/practice/practice/side_bar.html#project">About Me</a></li>
+                    <li><a href="/Users/shibadazo/practice/practice/side_bar.html#background">Background</a></li>
+                    <li><a href="/Users/shibadazo/practice/practice/side_bar.html#achievement">Achievement</a></li>
+                    <li><a href="/Users/shibadazo/practice/practice/side_bar.html#contact">Contact</a></li>
+                </ul>
+                <p class="copyright">Copyright &copy; 2022 Shibahara Shogo All Rights Reserved.</p>
+            </footer>
+        </div>
+    </body>
+</html>

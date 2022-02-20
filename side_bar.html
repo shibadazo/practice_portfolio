@@ -2,7 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>練習：サイドバー付き</title>
+        <title>Portfolio About Shibahara</title>
         <meta name="description" content="自己紹介ページです！お気軽に閲覧ください〜！">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
@@ -13,21 +13,42 @@
         <link rel="stylesheet" href="side_bar.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="side_bar.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+        </style>
     </head>
 
     <body>
         <header id="header">
             <nav id="navi">
-                <p class="name">SHIBAHARA<br>SHOGO</p>
+                <a href="/Users/shibadazo/practice/practice/side_bar.html"><p class="name">SHIBAHARA<br><br>SHOGO</p></a>
                 <ul class="nav-menu">
-                    <li><a href="#">私たちについて</a></li>
-                    <li><a href="#">サービス</a></li>
-                    <li><a href="#">商品登録</a></li>
-                    <li><a href="#">展示会</a></li>
-                    <li><a href="#">暮らしの日記</a></li>
-                    <li><a href="#">会社概要</a></li>
+                    <li>
+                        <a href="#project">
+                            <img src="/Users/shibadazo/practice/practice/image/svg/profile.svg">
+                            <p class="profile">About Me</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#background">
+                            <img src="/Users/shibadazo/practice/practice/image/svg/diary.svg">
+                            <p class="diary">Background</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#achievement">
+                            <img src="/Users/shibadazo/practice/practice/image/svg/program.svg">
+                            <p class="program">Achievement</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <img src="/Users/shibadazo/practice/practice/image/svg/contact.svg">
+                            <p class="contact">Contact</p>
+                        </a>
+                    </li>
                 </ul>
-                <a href="side_bar.html"><img class="logo" src="/Users/shibadazo/practice/practice/image/img/soccer.svg"></a>
+                <!-- <a href="side_bar.html"><img class="logo" src="/Users/shibadazo/practice/practice/image/img/soccer.svg"></a> -->
             </nav>
 
             <div class="hamburger">
@@ -39,19 +60,12 @@
             <div id="mask"></div>
         </header>
 
-        <!-- <div id="video">
-            <img class="bg-video" src="/Users/shibadazo/practice/practice/image/img5.JPG">
-        </div> -->
-
         <div class="container">
             <main>
                 <div id="video"></div>
-                <!-- <div id="video">
-                    <img class="bg-video" src="/Users/shibadazo/practice/practice/image/img5.JPG">
-                </div> -->
                 <section id="project">
                     <div class="wrapper">
-                        <h2 class="sec-title">Nice to meet you!</h2>
+                        <h1 class="sec-title">Nice to meet you!</h1>
                         <ul class="list">
                             <li>
                                 <div class="hidden">
@@ -104,12 +118,10 @@
                                         <div class="caption">
                                             <div class="caption_inner">
                                                 <ul>
-                                                    <li>PYTHON</li>
-                                                    <li>HTML</li>
-                                                    <li>CSS</li>
-                                                    <li>JavaScript</li>
-                                                    <li>PostgreSQL</li>
-                                                    <li>PHP</li>
+                                                    <li>sports：soccer, baseball, badminton</li>
+                                                    <li>pet：甲斐犬（今年で14歳）</li>
+                                                    <li>food：ラーメン, カレー</li>
+                                                    <li>hobby：sports, drive car</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -124,15 +136,8 @@
                                     </a>
                                     <div class="hidden-text">
                                         <div class="caption">
-                                            <div class="caption_inner">
-                                                <ul>
-                                                    <li>PYTHON</li>
-                                                    <li>HTML</li>
-                                                    <li>CSS</li>
-                                                    <li>JavaScript</li>
-                                                    <li>PostgreSQL</li>
-                                                    <li>PHP</li>
-                                                </ul>
+                                            <div class="caption_inner_comment">
+                                                <p>何事も楽しく！自分にとってやりがいのあるものに挑戦していきたいと考えています！もし自分に興味を持たれた方は、ページ下にあるコンタクトフォームからご連絡ください！</p>
                                             </div>
                                         </div>
                                     </div>
@@ -142,93 +147,128 @@
                     </div>
                 </section>
 
-                <!-- <section id="achievement">
-
-                </section> -->
-
-                <section id="flow">
+                <section id="background">
                     <div class="wrapper">
-                        <h2 class="sec-title">Background</h2>
-                        <p class="sentence">お問い合わせいただいてから、家が完成するまでの流れです。</p>
-                        
+                        <h1 class="sec-title">Background</h1>
                         <div class="step">
                             <ol class="figure">
-                                <li>Birthplace</li>
-                                <li>Junior High School</li>
-                                <li>High School</li>
-                                <li>University</li>
-                                <li>Future</li>
+                                <li><h1>Birthplace</h1></li>
+                                <li><h3>Junior High School</h3></li>
+                                <li><h1>High School</h1></li>
+                                <li><h1>University</h1></li>
+                                <li><h1>Future</h1></li>
                             </ol>
-
                             <dl class="description">
-                                <dt><span>1</span>愛知県安城市</dt>
+                                <dt><span>1</span><strong>愛知県安城市</strong></dt>
                                 <dd>
-                                    テキストテキストテキストテキストテキストテキストテキストテキスト
-                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                    イチジクや梨が有名な町。また安城七夕祭りやデンパークなど様々なイベントや施設があるのでぜひ！
                                 </dd>
-                                <dt><span>2</span>安城市立安城北中学校</dt>
+                                <dt><span>2</span><strong>安城市立安城北中学校</strong></dt>
                                 <dd>
-                                    テキストテキストテキストテキストテキストテキストテキストテキスト
-                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                    サッカー部に所属し最後の夏に全国大会に出場することができた。また様々な役職を担ったりと色々な経験をした。
                                 </dd>
-                                <dt><span>3</span>愛知県立西尾高等学校</dt>
+                                <dt><span>3</span><strong>愛知県立西尾高等学校</strong></dt>
                                 <dd>
-                                    テキストテキストテキストテキストテキストテキストテキストテキスト
-                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                    文武両道を目標とする校風だったが、なかなか厳しかった...最後までやり遂げることはできたと思う！
                                 </dd>
-                                <dt><span>4</span>私立武蔵野大学</dt>
+                                <dt><span>4</span><strong>私立武蔵野大学</strong></dt>
                                 <dd>
-                                    テキストテキストテキストテキストテキストテキストテキストテキスト
-                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                    PCに触れること自体大学入学してからではあったが、データサイエンスという領域を学ぶことができてよかったと感じている。
                                 </dd>
-                                <dt><span>5</span>将来</dt>
+                                <dt><span>5</span><strong>将来</strong></dt>
                                 <dd>
-                                    テキストテキストテキストテキストテキストテキストテキストテキスト
-                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                    大学で学んだことを生かし、何事も楽しく！自分にとってやりがいのあるものに挑戦していきたいと思う！
                                 </dd>
                             </dl>
                         </div>
                     </div>
                 </section>
 
-                <section id="feature">
+                <section id="achievement">
                     <div class="wrapper">
-                        <h2 class="sec-title">明るいHOUSEの特徴</h2>
-                        <ul class="list">
-                            <li>
-                                <a href="#">design</a>
-                                <p class="title">デザイン</p>
-                                <p class="title">テキストテキストテキスト</p>
-                            </li>
-                            <li>
-                                <a href="#">quality</a>
-                                <p class="title">性能</p>
-                                <p class="title">テキストテキストテキスト</p>
-                            </li>
-                            <li>
-                                <a href="#">support</a>
-                                <p class="title">サポート</p>
-                                <p class="title">テキストテキストテキスト</p>
-                            </li>
-                        </ul>
+                    <h1 class="sec-title">Achievement</h1>
+                        <div class="box">
+                            <div class="exaple-1 card">
+                                <div class="inner" style="background: url('/Users/shibadazo/practice/practice/image/3d_ouput.png') 20% 1%/cover no-repeat;">
+                                    <div class="mask">
+                                        <div class="card-title first">
+                                            <h1>アフィン変換を使用した三次元プロット</h1>
+                                        </div>
+                                        <div class="card-explain">
+                                            二次元の画像をアフィン変換を用いて、三次元のグラフ上に結果をプロットしたもの。
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exaple-1 card">
+                                <div class="inner" style="background: url('/Users/shibadazo/practice/practice/image/miraisouzou1.png') 20% 1%/cover no-repeat;">
+                                    <div class="mask">
+                                        <div class="card-title second">
+                                            <h1>1年:：5D World Map Systemを用いた絶滅種・絶滅危惧種の原因・結果の時空間的・多元的要素分析の実現</h1>
+                                        </div>
+                                        <div class="card-explain">
+                                            <!-- 本研究は大学二年生の際にIES国際学会において、口頭発表させて頂き、Best Paper Awardという賞を受賞させて頂いた。<a href="/Users/shibadazo/practice/practice/future1.html"><strong class="jump-future1">詳しくはこちらから。</strong></a> -->
+                                            本研究は大学二年生の際にIES国際学会において、口頭発表させて頂き、Best Paper Awardという賞を受賞させて頂いた。<a class="jump-future1" href="/Users/shibadazo/practice/practice/future1.html">詳しくはこちらから。</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exaple-1 card">
+                                <div class="inner" style="background: url('/Users/shibadazo/practice/practice/image/miraisouzou2.png') 20% 1%/cover no-repeat;">
+                                    <div class="mask">
+                                        <div class="card-title third">
+                                            <h1>2年：姿勢推定技術を用いたバーチャルトレーニングシステム</h1>
+                                        </div>
+                                        <div class="card-explain">
+                                            同学部の鎌田と共に共同研究の形で取り組んでいる。教育システム情報学会2020年度JSiSE学生研究発表会に共同著者して提出した。
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exaple-1 card">
+                                <div class="inner" style="background: url('/Users/shibadazo/practice/practice/image/microbit.png') 20% 1%/cover no-repeat;">
+                                    <div class="mask">
+                                        <div class="card-title fourth">
+                                            <h1>microbitを用いた自転車のスピード喚起</h1>
+                                        </div>
+                                        <div class="card-explain">
+                                            大学一年生の際の講義の成果物として、スピードを出し過ぎていると判断した場合音を鳴らして注意喚起を行うものを作成した。
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exaple-1 card">
+                                <div class="inner" style="background: url('/Users/shibadazo/practice/practice/image/dream-journey5.png') 20% 1%/cover no-repeat;">
+                                    <div class="mask">
+                                        <div class="card-title fifth">
+                                            <h1>夢日記 〜Dream Journey〜</h1>
+                                        </div>
+                                        <div class="card-explain">
+                                            大学三年生の講義の成果物として、睡眠の際に見ている夢について共有することができるSNSを作成した。本成果物
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 <section id="contact">
                     <div class="wrapper">
-                        <h2 class="sec-title">お問い合わせ</h2>
-                        <p class="sentence">お問い合わせは下記からお願いいたします。</p>
-                        <div class="link">
-                            <a class="item" href="#">
-                                <img src="/Users/shibadazo/practice/practice/image/img/document.jpeg" alt=""><br>資料請求
-                            </a>
-                            <a class="item" href="#">
-                                <img src="/Users/shibadazo/practice/practice/image/img/headphone2.jpeg" alt=""><br>Web説明会
-                            </a>
-                            <a class="item" href="#">
-                                <img src="/Users/shibadazo/practice/practice/image/img/soudann.jpeg" alt=""><br>個別相談
-                            </a>
-                        </div>
+                        <h1 class="sec-title">Contact</h1>
+                        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf5AL17CmyJeB8ltuImrmkUsECbH7fahh5kmI39f3nBNDTS7A/formResponse" method="post">
+                            <dl>
+                                <dt><label for="name">NAME</label></dt>
+                                <dd><input type="text" id="name" name="entry.2005620554"></dd>
+                                <dt><label for="email">E-mail</label></dt>
+                                <dd><input type="email" id="email" name="entry.1045781291"></dd>
+                                <dt><label for="subject">SUBJECT</label></dt>
+                                <dd><input type="text" id="subject" name="entry.409719073"></dd>
+                                <dt><label for="message">MESSAGE</label></dt>
+                                <dd><textarea id="message" name="entry.839337160"></textarea></dd>
+                            </dl>
+                            <div class="button"><input type="submit" value="送信"></div>
+                        </form>
                     </div>
                 </section>
             </main>
@@ -237,30 +277,13 @@
                 <a id="to-top" href="#"></a>
 
                 <ul class="menu">
-                    <li><a href="#">私たちについて</a></li>
-                    <li><a href="#">サービス</a></li>
-                    <li><a href="#">商品情報</a></li>
-                    <li><a href="#">展示会</a></li>
-                    <li><a href="#">暮らしの日記</a></li>
-                    <li><a href="#">会社概要</a></li>
+                    <li><a href="#project">About Me</a></li>
+                    <li><a href="#background">Background</a></li>
+                    <li><a href="#achievement">Achievement</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-                <p class="copyright">Copyright &copy; 2021 Akarui HOUSE All Rights Reserved.</p>
+                <p class="copyright">Copyright &copy; 2022 Shibahara Shogo All Rights Reserved.</p>
             </footer>
         </div>
-
-        <!-- <div align="center"> -->
-            <!-- 折り畳み展開ポインタ -->
-            <!-- <div onclick="obj=document.getElementById('test').style; obj.display=(obj.display=='none')?'block':'none';">
-                <a style="cursor:pointer;"><h1>▼ クリックで展開</h1</a>
-            </div> -->
-            <!--// 折り畳み展開ポインタ -->
-        
-            <!-- 折り畳まれ部分 -->
-            <!-- <div id="test" style="display:none;clear:both;">
-                <p>ここだよ〜</p>    
-            </div> -->
-            <!--// 折り畳まれ部分 -->
-        <!-- </div> -->
-
     </body>
 </html>

@@ -6,12 +6,11 @@ html {
 
 body {
     color: #121212;
-    font-family: 'Noto Sans JP', sans-serif;
-    /* background-color: rgb(60, 45, 45); */
+    font-family: 'Graduate', cursive;
+    /* font-family: 'Noto Sans JP', sans-serif; */
 }
 
 a {
-    color: #121212;
     text-decoration: none;
 }
 
@@ -27,21 +26,16 @@ li {
 /* サイドメニューの横幅分だけ左にmarginをとる */
 .container {
     margin-left: 250px;
-    /* padding-top: 100vh; */
-    /* position: relative; */
 }
 
 section {
     background: rgba(220, 221, 221, 0.8);
 }
 
-/* コンテンツ幅を設定するための共通クラス */
 .wrapper {
     max-width: 900px;
     padding: 80px 20px;
     margin: 0 auto;
-    /* margin-bottom: 0; */
-    /* background: rgba(220, 221, 221, 0.8); */
 }
 
 .site-title {
@@ -76,18 +70,10 @@ beforeが左の線, afterが右の線
     width: 28%;
 }
 
-/* ヘッダー */
-/* 
-サイドのロゴとグローバルナビゲーションはheaderタグで囲む
-サイドに配置しているが、ロゴとグローバルナビゲーションを含んだヘッダー要素のため、
-asideタグではなく、headerタグを使用する。
-asideタグは、メインコンテンツとは直接関係ない補足的な情報をサイドバーとして配置する場合に使用する。
-*/
-
 #header {
     width: 250px;
     height: 100%;
-    /* background-color: #1E0000; */
+    /* height: 70px; */
     background-color: rgb(141, 111, 47);
     position: fixed;
     top: 0;
@@ -97,62 +83,55 @@ asideタグは、メインコンテンツとは直接関係ない補足的な情
 }
 
 #header .nav-menu {
-    margin-bottom: 60px;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-60%);
+    -webkit-transform: translateY(-60%);
+}
+
+#header ul {
+    bottom: 5%;
 }
 
 #header li {
     font-size: 0.875rem;
     padding: 8px 0;
+    margin-bottom: 10%;
 }
 
 #header li a {
     color: #fff;
 }
 
+#header li a img {
+    width: 40%;
+} 
+
 .name {
-    font-size: 35px;
+    font-size: 40px;
     font-weight: bold;
     color: #fff;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 60px;
 }
 
 .logo {
-    width: 100%;
-    padding: 20px 30px 30px 55px;
-    /* text-align: center; */
+    width: 80%;
+    padding: 20px 30px 0px 55px;
 }
 
-/* 背景画像 */
 #video {
     width: 100%;
     height: 100vh;
     background: url('/Users/shibadazo/practice/practice/image/img5.JPG') top center;
-    /* background: url('/Users/shibadazo/practice/practice/image/own2.jpg') top center; */
     background-size: cover;
     z-index: -10;
     position: fixed;
 }
 
-/* 
-position: fixed;　で動画を固定し、
-top: -220px;　で表示位置を調整
-z-index　でマイナスを設定して、他のコンテンツの下に隠れるようにする
-*/
-
-/* #video .bg-video { */
-    /* position: fixed; */
-        /* top: -220px; */
-    /* z-index: -10; */
-    /* width: 100%; */
-/* } */
-
 /* Project */
-/* 背景に黒の透過グラデーションを設定 */
 #project {
-    /* background: linear-gradient(rgba(220, 221, 221, 0), rgba(220, 221, 221, 0.8)); */
     background: linear-gradient(to bottom, rgba(225, 225, 225, 0), rgba(220, 221, 221, 0.8));
-    /* background: rgba(0, 0, 0, 0.8); */
     color: #fff;
     padding-top: 100vh;
 }
@@ -170,7 +149,6 @@ z-index　でマイナスを設定して、他のコンテンツの下に隠れ�
     position: relative;
 }
 
-/* 下段の２つはマージンを設定しない */
 #project .list li:last-child, #project .list li:nth-last-child(2) {
     margin-bottom: 0;
 }
@@ -204,7 +182,6 @@ z-index　でマイナスを設定して、他のコンテンツの下に隠れ�
     width: 100%;
     height: 100%;
     overflow: hidden;
-    /* margin: 10px 8px 10px 16px; */
     position: relative;
 }
 
@@ -223,6 +200,13 @@ z-index　でマイナスを設定して、他のコンテンツの下に隠れ�
     transform: translateY(-50%);
 }
 
+#project .hidden .caption .caption_inner_comment {
+    position: absolute;
+    margin-right: 3em;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 #project .hidden .hidden-text {
     width: 100%;
     height: 100%;
@@ -230,7 +214,6 @@ z-index　でマイナスを設定して、他のコンテンツの下に隠れ�
     top: 0;
     left: 0;
     margin-left: -100%;
-    /* background-color: rgba(0, 0, 0, 4); */
     background-color: rgb(141, 111, 47);
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
@@ -245,23 +228,10 @@ z-index　でマイナスを設定して、他のコンテンツの下に隠れ�
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
 }
-/* 
-#project .hidden img:nth-child(2) {
-    position: absolute;
-    transform: translate(-50%, -50%);
-} */
 
 #project .hidden:hover img {
     margin-left: 100%;
 }
-
-/* #project .hidden .hidden-text .caption ul { */
-        /* padding-top: 5%; */
-    /* padding-left: 6%; */
-    /* position: absolute; */
-    /* top: 50%; */
-    /* transform: translateY(-50%); */
-/* } */
 
 #project .hidden .hidden-text .caption ul li {
     width: 100%;
@@ -269,15 +239,14 @@ z-index　でマイナスを設定して、他のコンテンツの下に隠れ�
     border: 0;
     margin-bottom: 0;
     line-height: 200%;
-    /* margin-left: -1.5em; */
-    /* padding-left: 1em; */
+}
+
+#project .hidden .hidden-text .caption p {
+    width: 100%;
 }
 
 /* feature */
-/* 背景に黒の透過を設定 */
 #feature {
-    /* background: rgba(0, 0, 0, 0.8); */
-    /* background: rgba(220, 221, 221, 0.8); */
     color: #fff;
     padding-bottom: 80px;
 }
@@ -292,7 +261,6 @@ z-index　でマイナスを設定して、他のコンテンツの下に隠れ�
     font-size: 0.875rem;
     text-align: center;
 }
-
 
 /* 円を作成 */
 /* 
@@ -317,10 +285,6 @@ widthに100%を設定して、padding で上下を50%に設定
     overflow: hidden;
 }
 
-/* 
-ホバー時のスライドを疑似要素で作成 
-「left: -100%;」で左側に隠しておく
-*/
 #feature .list li a::before {
     content: "";
     width: 100%;
@@ -350,48 +314,39 @@ widthに100%を設定して、padding で上下を50%に設定
 }
 
 
-/* flow */
-#flow {
-    /* background: rgba(220, 221, 221, 0.8); */
+/* background */
+#background {
     color: rgb(0, 0, 0);
-    /* background-color: #fff; */
     padding-top: 40px;
 }
 
-#flow .step {
+#background .step {
     display: flex;
     margin-top: 60px;
 }
 
-#flow .figure {
+#background .figure {
     position: relative;
 }
 
 /* 図形下の黄色い棒線を作成 */
-#flow .figure::before {
+#background .figure::before {
     content: "";
     width: 30px;
-    /* width: 50px; */
     height: 600px;
     background-color: #1E0000;
     position: absolute;
     top: 0;
     left: 85px;
-    /* left: 75px; */
 }
 
 /* 図形の四角い部分を作成 */
-#flow .figure li {
+#background .figure li {
     width: 200px;
     height: 80px;
     line-height: 80px;
-    /* background-color: #1E0000; */
     background-color: rgb(141, 111, 47);
     color: rgb(255, 255, 255);
-    /* border-right: solid 2px #fff;
-    border-top: solid 1px #fff;
-    border-bottom: solid 1px #fff;
-    border-left: solid 2px #fff; */
     font-size: 0.875rem;
     margin-bottom: 60px;
     position: relative;
@@ -402,15 +357,11 @@ widthに100%を設定して、padding で上下を50%に設定
 図形の三角部分を疑似要素で作成
 「position」を使用して、四角の下に配置
 */
-#flow .figure li::before {
+#background .figure li::before {
     content: "";
-    /* border-top: 30px solid #1E0000; */
     border-top: 30px solid rgb(141, 111, 47);
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
-    /* border-top: solid 3px #fff;
-    border-right: solid 3px #fff;
-    border-left: solid 3px #fff; */
     position: absolute;
     top: 80px;
     right: 0;
@@ -418,15 +369,15 @@ widthに100%を設定して、padding で上下を50%に設定
     margin: 0 auto;
 }
 
-#flow .figure li:last-child {
+#background .figure li:last-child {
     margin-bottom: 0;
 }
 
-#flow .description {
+#background .description {
     margin-left: 10%;
 }
 
-#flow .description dt {
+#background .description dt {
     border-bottom: solid 1px #414141;
     font-size: 1.25rem;
     padding-bottom: 8px;
@@ -438,11 +389,10 @@ widthに100%を設定して、padding で上下を50%に設定
 丸数字を作成
 「position」を使用して、タイトルの左側に配置
 */
-#flow .description dt span {
+#background .description dt span {
     width: 35px;
     height: 35px;
     line-height: 35px;
-    /* background-color: #1E0000; */
     background-color: rgb(141, 111, 47);
     border-radius: 50%;
     color: #fff;
@@ -454,77 +404,264 @@ widthに100%を設定して、padding で上下を50%に設定
     left: -45px;
 }
 
-#flow .description dd {
+#background .description dd {
     margin-bottom: 43px;
 }
 
-#flow .description dd:last-child {
+#background .description dd:last-child {
     margin-bottom: 0;
 }
 
-#flow .sentence {
+#background .sentence {
     text-align: center;
+}
+
+/* Achievement */
+#achievement {
+    color: #fff;
+    padding-bottom: 80px;
+}
+
+#achievement .box {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-flow: wrap;
+}
+
+#achievement .card {
+    width: calc((100% - 20px) / 3);
+    margin-right: 10px;
+    margin-bottom: 5%;
+}
+
+#achievement .card:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+#achievement .card .inner {
+    background-color: #fff;
+    min-height: 450px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+
+#achievement .card .mask {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+#achievement .card:hover .mask {
+    top: 40%;
+}
+
+#achievement .card .mask .card-title {
+    background-color: linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7));
+    height: 30%;
+    font-size: 1.2vmin;
+}
+
+#achievement .card .mask .first,
+#achievement .card .mask .third,
+#achievement .card .mask .fourth {
+    padding: 20px 10px;
+}
+
+#achievement .card .mask .second {
+    padding: 0 10px;
+}
+
+#achievement .card .mask .fifth {
+    padding: 30px 10px;
+}
+
+#achievement .card .card-explain {
+    height: 30%;
+    font-size: 100%;
+    color: #fff;
+    padding: 10px;
+}
+
+#achievement .card-explain .jump-future1 {
+    color: red;
+}
+
+#achievement .card-explain .jump-future1:hover {
+    /* color: red; */
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+#achievement .card .inner:hover .data {
+    transform: translateY(0);
+}
+
+#achievement .card .data {
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(calc(70px + 1em));
+    transition: transform 0.3s;
+    background-color: #fff;
+    box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
+}
+
+#achievement .card .data .content {
+    padding: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+#achievement .card .author {
+    font-size: 12px;
+}
+
+#achievement .card_maintitle {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#achievement .card .text {
+    height: 100%;
+    margin: 0;
+}
+
+#achievement .example-1 .content {
+    color: #000;
+}
+
+#achievement .card_href_05 {
+    text-decoration: none;
 }
 
 /* contact */
 #contact {
-    /* background: rgba(220, 221, 221, 0.8); */
     color: rgb(0, 0, 0);
-    /* background-color: #fff; */
     padding-bottom: 80px;
 }
 
-#contact .link {
+#contact dl {
     display: flex;
-    justify-content: space-between;
-    margin-top: 60px;
-}
-
-#contact .link .item {
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    width: 30%;
-    border: solid 1px #fff;
-    display: block;
-    font-size: 0.875rem;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
     position: relative;
-    padding: 50px 0;
-    text-align: center;
-    transition: 0.1s;
 }
 
-#contact .link .item::before {
-    content: "";
-    border-top: 20px solid transparent;
-    border-right: 20px solid #121212;
-    position: absolute;
-    right: 4px;
-    bottom: 4px;
-}
-
-/*
-ホバー時は枠線を太くする
-「border」ではなく、「outline」を使用することで、ホバー時にレイアウトがずれるのを防ぐ
-*/
-#contact .link .item:hover {
-    outline: solid 3px #121212;
-}
-
-#contact .link .item img {
-    color: #000;
-    margin-bottom: 5px;
-}
-
-#contact .sentence {
+#contact dt {
+    width: 15%;
+    margin-bottom: 10px;
+    padding-top: 10px;
     text-align: center;
 }
+
+#contact dd {
+    width: 85%;
+    margin-bottom: 10px;
+}
+
+#contact dd input, #contact dd textarea {
+    background-color: rgba(141, 111, 47, 0.7);
+    width: 100%;
+    border: solid 1px rgb(0, 0, 0);
+    padding: 10px;
+}
+
+#contact dd textarea {
+    height: 10rem;
+}
+
+#contact .button {
+    text-align: center;
+}
+
+#contact .button input {
+    width: 200px;
+    background-color: #24292e;
+    color: #fff;
+    padding: 15px 0;
+    border: solid 1px #24292e;
+}
+
+#contact .button input:hover {
+    background: #fff;
+    color: #24292e;
+}
+
+/* 未来創造PJの別ページ用 */
+#future1 {
+    text-align: center;
+}
+
+#future1 .explain-text {
+    font-size: large;
+    font-weight: bold;
+}
+
+#future1 .future-box {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+#future1 .future-card-1 {
+    width: 45%;
+    margin-right: 10px;
+}
+
+#future1 .future-card-2 {
+    width: 45%;
+    margin-right: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#future1 .home-button {
+    text-align: center;
+}
+
+#future1 .home-button:hover {
+    color: blue;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+
+/* #future1 ul { */
+    /* overflow: hidden; */
+    /* width: 100%; */
+/* } */
+
+/* #future1 li { */
+    /* width: 45%; */
+    /* display: inline-block; */
+    /* text-align: center; */
+    /* top: 0; */
+        /* float: left; */
+/* } */
+
+/* #future1 .world-map { */
+    /*  */
+/* } */
 
 /* フッター */
 #footer {
-    /* background-color: #414141; */
     background-color: #000000;
-    /* background-color: repeating-linear-gradient(circle at -1000% 0%, rgba(116, 77, 48, 0.7), #573216, rgba(116, 77, 48, 0.9) 10%), repeating-radial-gradient(circle at -1000% 0%, #573216, #573216 0.1%, #744d30 0.4%, #744d30 0.5%); */
-    /* background-image: url(/Users/shibadazo/portfolio-shibadazo/image/img/wood2.jpg); */
     color: #fff;
     padding: 20px 0;
 }
@@ -572,12 +709,12 @@ widthに100%を設定して、padding で上下を50%に設定
 
 #to-top::after {
     content: "";
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-bottom: 7px solid #fff;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 9px solid #fff;
     position: relative;
-    left: 17px;
-    bottom: 3px;
+    left: 16px;
+    bottom: 1px;
 }
 
 @media screen and (max-width: 960px) {
@@ -604,17 +741,17 @@ widthに100%を設定して、padding で上下を50%に設定
     
     #header {
         width: 100%;
-        height: 72px;
+        /* height: 100vh; */
+        height: 100px;
         padding: 0;
         z-index: 10;
+        background-color: transparent;
     }
 
     /* ハンバーガーメニュー */
     #navi {
-        width: 300px;
-        /* background: #fff; */
-        background-color: #1E0000;
-        padding: 25px;
+        width: 250px;
+        background-color: rgb(141, 111, 47);
         position: fixed;
         top: 0;
         left: -300px;
@@ -624,10 +761,6 @@ widthに100%を設定して、padding で上下を50%に設定
         transition: 0.5s;
         z-index: 20;
     }
-    /* #header h1 {
-        top: 0;
-        left: -300px;
-    } */
     .open #navi {
         left: 0;
         opacity: 1;
@@ -650,8 +783,8 @@ widthに100%を設定して、padding で上下を50%に設定
     }
     .hamburger span {
         width: 30px;
-        height: 2px;
-        background-color: #121212;
+        height: 5px;
+        background-color: rgb(141, 111, 47);
         border-radius: 4px;
         display: block;
         position: absolute;
@@ -659,16 +792,16 @@ widthに100%を設定して、padding で上下を50%に設定
         transition: 0.5s;
     }
     .hamburger span:nth-child(1) {
-        top: 4px;
+        top: 3px;
     }
     .hamburger span:nth-child(2) {
-        top: 14px;
+        top: 12px;
     }
     .hamburger span:nth-child(3) {
         bottom: 4px;
     }
     .open .hamburger span {
-        background-color: #121212;
+        background-color: #fff;
     }
     .open .hamburger span:nth-child(1) {
         transform: translateY(10px) rotate(-315deg);
@@ -698,23 +831,9 @@ widthに100%を設定して、padding で上下を50%に設定
     
     /* video */
     #video {
-        top: 72px;
+        top: 0;
     }
-    /* #video .bg-video { */
-            /* height: 520px; */
-        /* height: 100vh; */
-        /* width: 100%; */
-        /* top: 72px; */
-        /* left: 0; */
-        /* right: 0; */
-        /* bottom: 0; */
-            /* margin: 0 auto; */
-    /* } */
 
-    /* project */
-    /* #project { */
-        /* background: rgba(255, 255, 255, 0.8); */
-    /* } */
     #project .list {
         flex-direction: column;
     }
@@ -737,21 +856,21 @@ widthに100%を設定して、padding で上下を50%に設定
         padding-bottom: 60px;
     }
 
-    /* flow */
-    #flow {
+    /* background */
+    #background {
         padding-top: 0;
     }
-    #flow .step {
+    #background .step {
         flex-direction: column;
         align-items: center;
         margin-top: 30px;
     }
-    #flow .figure {
+    #background .figure {
         margin-bottom: 80px;
     }
 
     /* 図形下の黄色い棒線を中央に配置 */
-    #flow .figure::before {
+    #background .figure::before {
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -762,7 +881,7 @@ widthに100%を設定して、padding で上下を50%に設定
     80pxは任意の数値ですので、図形をもっと小さくして横の余白とりたい場合は、
     ここの数値を大きくする等して調整が可能
     */
-    #flow .figure li {
+    #background .figure li {
         width: calc(100vw - 80px);
     }
 
@@ -770,12 +889,31 @@ widthに100%を設定して、padding で上下を50%に設定
     図形（三角部分）の横幅を設定
     図形のサイズに合わせて調整を行う
     */
-    #flow .figure li::before {
+    #background .figure li::before {
         border-left: calc(50vw - 40px) solid transparent;
         border-right: calc(50vw - 40px) solid transparent;
     }
-    #flow .description {
+    #background .description {
         margin-left: 50px;
+    }
+
+    #achievement .box {
+        flex-direction: column;
+    }
+
+    #achievement .box .card {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #achievement .card .mask .card-title {
+        padding: 20px;
+        font-size: medium;
+        vertical-align: middle;
+    }
+
+    #achievement .card .mask .card-explain {
+        font-size: medium;
     }
 
     /* contact */
