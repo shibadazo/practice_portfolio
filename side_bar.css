@@ -565,6 +565,7 @@ widthに100%を設定して、padding で上下を50%に設定
 }
 
 #contact dd {
+    font-family: 'Noto Sans JP', sans-serif;
     width: 85%;
     margin-bottom: 10px;
 }
@@ -640,24 +641,6 @@ widthに100%を設定して、padding で上下を50%に設定
     font-weight: bolder;
     text-decoration: underline;
 }
-
-
-/* #future1 ul { */
-    /* overflow: hidden; */
-    /* width: 100%; */
-/* } */
-
-/* #future1 li { */
-    /* width: 45%; */
-    /* display: inline-block; */
-    /* text-align: center; */
-    /* top: 0; */
-        /* float: left; */
-/* } */
-
-/* #future1 .world-map { */
-    /*  */
-/* } */
 
 /* フッター */
 #footer {
